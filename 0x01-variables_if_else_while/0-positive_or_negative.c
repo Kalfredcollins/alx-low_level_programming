@@ -1,9 +1,10 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
 
 
 /**
- * main - prints all possible combination of two digits
- *
+ * main - Entry point for the block
  * Return : Always 0
  *
  */
@@ -11,27 +12,14 @@
 int main(void)
 
 {
-	int ones = '0';
-	int tens = '0';
+	int n;
 
-	for (tens = '0'; tens <= '9'; tens++)/* prints tens digit*/
-	{
-		for (ones ='0'; ones <= '9'; ones++)/* prints ones digit*/
-		{
-			if (!((ones == tens) || (tens > ones)))/*eliminates repitition*/
-			{
-				putchar(tens);
-				putchar(ones);
-				if (!(ones == '9' && tens == '8'))/*addes comma and space*/
-				{
-					putchar(',');
-					putchar(' ');
-				}
-			}
-		}
-	}
-	putchar('\n');
-
+	srand(time(0))
+	n = rand() - RAND_MAX / 2;
+	if (n > 0)
+		printf("%i is positive\n", n);
+	else if (n < 0)
+		printf("%i is negative\n", n);
+	else
+		printf("% is zero\n", n);
 	return (0);
-
-}	
