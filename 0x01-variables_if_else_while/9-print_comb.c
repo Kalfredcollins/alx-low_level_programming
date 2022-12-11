@@ -1,12 +1,12 @@
 #include <stdio.h>
 /**
  * main - Entry point
+ *
  * Return: Always 0
  */
 
 int main(void)
 {
-
 	char c;
 
 
@@ -23,8 +23,8 @@ int main(void)
 	while
 		(c <= 'f') {
 			putchar(c);
-			C++;
+			c++;
 		}
 	putchar('\n');
-	return(0);
+	return (0);
 }
